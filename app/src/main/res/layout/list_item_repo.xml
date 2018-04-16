@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtRepositoryName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        style="@style/TextTitle"
+        app:layout_constraintEnd_toStartOf="@+id/imgAuthor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Nome do Repositorio" />
+
+    <TextView
+        android:id="@+id/txtRepositoryDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:minLines="1"
+        app:layout_constraintEnd_toStartOf="@+id/imgAuthor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRepositoryName"
+        tools:text="Descricao do repositorio lorem ipsum dolor sit amet lorem ipsum dolor sit amet" />
+
+    <TextView
+        android:id="@+id/txtRepositoryForks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:drawableLeft="@drawable/ic_repo_forked"
+        android:drawablePadding="3dp"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="@color/yellow"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRepositoryDescription"
+        tools:text="555" />
+
+    <TextView
+        android:id="@+id/txtRepositoryStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/ic_star"
+        android:drawablePadding="3dp"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="@color/yellow"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txtRepositoryForks"
+        app:layout_constraintTop_toBottomOf="@+id/txtRepositoryDescription"
+        tools:text="555" />
+
+    <ImageView
+        android:id="@+id/imgAuthor"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/txtRepositoryUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="@+id/imgAuthor"
+        app:layout_constraintStart_toStartOf="@+id/imgAuthor"
+        app:layout_constraintTop_toBottomOf="@+id/imgAuthor"
+        tools:text="Usuario" />
+
+</android.support.constraint.ConstraintLayout>
